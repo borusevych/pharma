@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="header-logo">
+            <img class="header-logo__image" src="./images/free-icon-pill-1068882.png" alt="">
+            <p class="header-logo__name">Pharma</p>
+        </a>
+        <button id="pre-enter" class="guest header-button__enter">Enter</button>
+        <button id="pre-appointment" class="header-button__appointment">Add an appointment</button>
+    </header>
+    <main>
+        <div class="modal-container">
+            <div class="guest modal-login-background">
+                <div class=" modal">
+                    <form id="form-login">
+                        <div class="modal-wrapper">
+                            <div class="modal-input">
+                                <label for="pre-login">Login: voidray@gmail.com</label>
+                                <input type="text" id="pre-login">
+                            </div>
+                            <div class="modal-input">
+                                <label for="pre-password">Password: 01011970</label>
+                                <input type="password" id="pre-password">
+                            </div>
+                            <p class="modal-error" id="enter-modal-error">Something is wrong</p>
+                        </div>
+
+                        <div class="modal-button">
+                            <button id="pre-submit" type="button" class="modal-container__button">Enter</button>
+                            <button id="pre-cancel" type="button" class="modal-container__button">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="appointment-background">
+                    <div class="appointment" id="appointment-modal">
+                        <form id="form-appointment">
+                            <div class="appointment__list">
+                                <label for="doctor">Doctor</label>
+                                <select name="doctor" id="doctor">
+                                    <option value="" disabled selected hidden>choose the doctor</option>
+                                    <option value="dentist">dentist</option>
+                                    <option value="cardiologist">cardiologist</option>
+                                    <option value="therapist">therapist</option>
+                                </select>
+                            </div>
+                            <div>
+                                <div class="appointment__general">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name">
+                                    <label for="purpose">Purpose</label>
+                                    <input type="text" id="purpose">
+                                    <label for="description">Description</label>
+                                    <input type="text" id="description">
+                                    <label for="urgency">Urgency</label>
+                                    <select name="urgency" id="urgency">
+                                        <option value="normal">normal</option>
+                                        <option value="urgent">urgent</option>
+                                    </select>
+                                </div>
+                                <div class="appointment-block appointment__cardiologist" name="cardiologist">
+                                    <label for="diseases">Transferred diseases <br> of the cardiovascular system</label>
+                                    <input type="text" id="diseases">
+                                </div>
+                                <div class="appointment-block appointment__dentist" name="dentist">
+                                    <label for="last-visit">Date of last visit</label>
+                                    <input type="text" id="last-visit">
+                                </div>
+                                <div class="appointment-block appointment__therapist" name="therapist">
+                                    <label for="therapist-age">Age</label>
+                                    <input type="text" id="therapist-age">
+                                </div>
+                            </div>
+                            <p class="modal-error" id="app-modal-error">Fill in all the fields</p>
+                            <div class="appointment-block appointment-buttons">
+                                <button id="app-create" class="appointment__button">Create</button>
+                                <button id="app-cancel" class="appointment__button">Delete</button>
+                            </div>
+                            <button id="app-close"><img src="./images/pngwing.com.png" alt=""></button>
+                        </form>
+                    </div>
+            </div>
+            <div class="filter">
+                <form>
+                    <label for="filter-name">Name:</label>
+                    <input type="text" id="filter-name">
+                    <label for="filter-doctor">Doctor:</label>
+                    <select name="filter-doctor" id="filter-doctor">
+                        <option value="all">any</option>
+                        <option value="dentist">dentist</option>
+                        <option value="cardiologist">cardiologist</option>
+                        <option value="therapist">therapist</option>
+                    </select>
+                    <label for="filter-urgency">Urgency:</label>
+                    <select name="filter-urgency" id="filter-urgency">
+                        <option value="all">any</option>
+                        <option value="normal">normal</option>
+                        <option value="urgent">urgent</option>
+                    </select>
+                    <button id="filter-search">Search</button>
+                </form>
+            </div>
+            <div class="visits"></div>
+        </div>    
+    </main>
+    <script src="./js/enter-form.js"></script>
+    <script src="./js/appointment-form.js"></script>
+    <script src="./js/filter.js"></script>
+</body>
+
+</html>
