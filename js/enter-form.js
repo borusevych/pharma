@@ -12,6 +12,7 @@ let token = localStorage.getItem('myToken');
 let modalLogin = document.querySelector('.modal-login-background');
 let email = preLogin.value;
 let password = prePassword.value;
+let filter = document.querySelector('.filter');
 
 modalLogin.addEventListener('click', function () {
   modalLogin.style.display = 'none';
@@ -75,6 +76,7 @@ function getToken(email, password) {
           localStorage.setItem('myToken', token);
           console.log('Access granted');
           preAppointment.style.display = 'flex';
+          filter.style.display = 'flex';
           guestElements.forEach(element => {
               element.style.display = 'none';
           });
@@ -132,3 +134,7 @@ function postCards(token) {
   });
 };
 postCards(token);
+
+if (token) {
+    filter.style.display = 'flex';
+}

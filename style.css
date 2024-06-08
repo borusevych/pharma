@@ -150,7 +150,7 @@ main{
 }
 /* -----------------------------filter -----------------------------*/
 .filter{
-    display: flex;
+    display: none;
     justify-content: center;
     margin-top: 50px;
     margin-bottom: 20px;
